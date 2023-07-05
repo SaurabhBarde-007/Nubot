@@ -17,14 +17,14 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      {loading ? (
+      {/* {loading ? (
         <LoadingScreen />
       ) : (
-        <>
-          <Navbar />
-          <Component {...pageProps} />
-        </>
-      )}
+        <> */}
+      <Navbar />
+      <Component {...pageProps} />
+      {/* </>
+      )} */}
     </>
   );
 }
