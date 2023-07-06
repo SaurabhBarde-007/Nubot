@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
     const delay = setTimeout(() => {
       setLoading(false);
       clearTimeout(delay);
-    }, 6000);
+    }, 2000);
 
     return () => clearTimeout(delay);
   }, []);
