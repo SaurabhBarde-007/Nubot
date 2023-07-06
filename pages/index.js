@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import styles from "../styles/homebg.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -7,7 +8,7 @@ export default function Home() {
   return (
     <>
       <main
-        className={`flex min-h-screen flex-col bg-white items-center justify-between p-24 ${inter.className}`}
+        className={`flex flex-col bg-white items-center justify-between p-24 ${styles["bg-image"]}`}
       >
         <div class="relative pt-36 ">
           <div class="lg:w-2/3 text-center mx-auto">
@@ -35,9 +36,9 @@ export default function Home() {
         </div>
       </main>
       <section
-        className={`flex min-h-screen flex-col bg-white items-center justify-between p-24 pt-0 ${inter.className}`}
+        className={`flex flex-col bg-white items-center justify-between p-24 pt-0 ${inter.className}`}
       >
-        <div className="w-screen h-screen flex justify-center items-center">
+        <div className="w-screen flex pt-10 justify-center items-center">
           <div className="w-[80vw] h-[60vh] md:w-[80vw] md:h-[70vh] xl:w-[90vw] xl:h-[90vh]">
             <iframe
               className="w-full h-full"
