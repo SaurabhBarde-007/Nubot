@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "../styles/homebg.module.css";
+import { motion } from "framer-motion";
+
+import { buttonAnim, fadeIn } from "../motion";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,17 +15,38 @@ export default function Home() {
       >
         <div class="relative pt-36 ">
           <div class="lg:w-2/3 text-center mx-auto">
-            <h1 class="text-gray-900 dark:text-black font-bold text-4xl md:text-6xl xl:text-7xl">
+            <motion.h1
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, duration: 0.4 }}
+              class="text-gray-900 dark:text-black font-bold text-4xl md:text-6xl xl:text-7xl"
+            >
               Shaping a world with{" "}
               <span class="text-primary dark:text-black">reimagination.</span>
-            </h1>
-            <p class="mt-8 text-gray-700 dark:text-black">
+            </motion.h1>
+            <motion.p
+              variants={fadeIn}
+              whileInView="visible"
+              initial="hidden"
+              transition={{ duration: 0.4, delay: 0.45 }}
+              viewport={{ once: true }}
+              class="mt-8 text-gray-700 dark:text-black"
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
               incidunt nam itaque sed eius modi error totam sit illum. Voluptas
               doloribus asperiores quaerat aperiam. Quidem harum omnis beatae
               ipsum soluta!
-            </p>
-            <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+            </motion.p>
+            <motion.div
+              variants={buttonAnim}
+              whileInView="visible"
+              initial="hidden"
+              transition={{ duration: 0.4, delay: 0 }}
+              viewport={{ once: true }}
+              class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6"
+            >
               <a
                 href="#"
                 class="relative flex h-11 w-full items-center justify-center px-5 py-3 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
@@ -31,7 +55,7 @@ export default function Home() {
                   Learn more
                 </span>
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
       </main>
