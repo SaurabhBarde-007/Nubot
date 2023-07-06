@@ -10,7 +10,7 @@ const Index = () => {
                 <div className='w-[90vw] sm:w-[80vw] md:w-[600px]  rounded-lg h-[60px] bg-white flex justify-start content-center p-1 relative'>
                     <Button src="./eth.png" text="Ethereum"/>
                     <div className='w-[2px] h-[50px] rounded-lg bg-[#aaa] mx-2 flex self-center'></div>
-                    <div className='w-[70vw] sm:w-[55vw] md:w-[45vw] lg:w-[40vw] xl:w-[27vw] h-[50px] rounded-lg bg-black flex self-center'>
+                    <div className='w-[70vw] sm:w-[55vw] md:w-[45vw] lg:w-[40vw] xl:w-[28vw] h-[50px] rounded-lg bg-black flex self-center'>
                         <input type='text' placeholder='Mention @ to tag NFT collections or Marketplaces' className='w-[100%] h-[100%] rounded-sm p-2 text-[#000] focus:outline-none' />
                     </div>
                 </div>
