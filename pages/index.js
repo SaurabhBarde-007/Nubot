@@ -4,6 +4,7 @@ import styles from "../styles/homebg.module.css";
 import { motion } from "framer-motion";
 
 import { buttonAnim, fadeIn } from "../motion";
+import Parallax from "@/components/Parallax";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -59,22 +60,24 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <section
-        className={`flex flex-col bg-white items-center justify-between p-24 pt-0 ${inter.className}`}
-      >
-        <div className="w-screen flex pt-10 justify-center items-center">
-          <div className="w-[80vw] h-[60vh] md:w-[80vw] md:h-[70vh] xl:w-[90vw] xl:h-[90vh]">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/POUPZZi_QLU"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
+      <Parallax>
+        <section
+          className={`flex flex-col bg-white items-center justify-between p-24 pt-0 ${inter.className}`}
+        >
+          <div className="w-screen flex pt-10 justify-center items-center">
+            <div className="w-[80vw] h-[60vh] md:w-[80vw] md:h-[70vh] xl:w-[90vw] xl:h-[90vh]">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/POUPZZi_QLU"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Parallax>
     </>
   );
 }
