@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
         <LoadingScreen />
       ) : (
         <> */}
-      <Navbar />
+      {/* <Navbar /> */}
       <Component {...pageProps} />
       {/* </>
       )} */}
