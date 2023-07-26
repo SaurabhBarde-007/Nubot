@@ -10,7 +10,7 @@ import ComingSoon from "@/components/ComingSoon";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const soon = true;
+  const soon = false;
   return (
     <>
       {soon ? (
